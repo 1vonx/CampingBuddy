@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 body {
-    background-color: #FFFBF5;
+    background-color: #fcfcfc !important;
+    margin: 0; 
+    font: 400 14px/20px Gloock, serif !important; 
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body::-webkit-scrollbar {
+    display: none;
+}
