@@ -1,11 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap'); */
 body {
     background-color: #fcfcfc !important;
-    margin: 0; 
-    font: 400 14px/20px Gloock, serif !important; 
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
 }
-html, body { height: 100%; }
+
+html,
+body {
+    height: 100%;
+}
 
 body::-webkit-scrollbar {
     display: none;
