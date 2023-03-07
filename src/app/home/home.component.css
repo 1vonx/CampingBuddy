@@ -1,14 +1,13 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap'); */
-
+main {
+    overflow-x: clip;
+}
 .moto {
-    /* margin-top: 550px; */
-    /* font-family: 'Gloock', serif; */
-    font-size: 100px;
+    font-size: 10vh;
     font-weight: 700;
 }
 
 .custom-height {
-    margin-top: 25vh;
+    margin-top: 30vh;
     padding-left: 12vh;
 }
 
@@ -20,12 +19,12 @@
     
 .carousel {
     position: absolute; 
-    width: 120%;
-    height: 180%; 
+    width: 100%;
+    height: 100%; 
     transform-style: preserve-3d;
     animation: rotate360 60s infinite forwards Linear;
 }
-    .image {
+.image {
     position: absolute;
     width: 300px;
     height: 230px;
@@ -77,11 +76,11 @@
         }
         .image:nth-child(8) {
         background-image: url("https://lp-cms-production.imgix.net/2020-11/wildcamping.jpg");
-         transform: rotateY(280deg) translateZ(438px);
+        transform: rotateY(280deg) translateZ(438px);
          
         }
         .image:nth-child(9) {
-            background-image: url("https://cdn3.park4night.com/lieu/1000501_1000600/1000510_gd.jpg");
-             transform: rotateY(320deg) translateZ(438px);
-            }
+        background-image: url("https://cdn3.park4night.com/lieu/1000501_1000600/1000510_gd.jpg");
+        transform: rotateY(320deg) translateZ(438px);
+        }
    
