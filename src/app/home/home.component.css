@@ -13,9 +13,7 @@
 }
 
 .customContainer {
-    /* position: relative; */
     width: 320px; 
-    /* margin: 100px auto auto; */
     margin: 150px 500px; 
     perspective: 1000px;
 }
@@ -29,8 +27,6 @@
 }
     .image {
     position: absolute;
-     /* width: 300px; */
-    /* height: 187px;  */
     width: 300px;
     height: 230px;
     top: 20px;
@@ -41,10 +37,6 @@
     box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
     }
     
-    /* span {
-    margin: auto;
-    font-size: 2rem;
-    } */
     @keyframes rotate360 {
     from {transform: rotateY(0deg);
     }
