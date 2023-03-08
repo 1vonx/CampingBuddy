@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-/* @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap'); */
 body {
     background-color: #fcfcfc   !important;
     margin: 0;
-    /* font-family: "Times New Roman", Times, serif; */
+    font-family: "Roboto", sans-serif !important;
 }

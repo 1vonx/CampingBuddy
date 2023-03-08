@@ -1,9 +1,21 @@
 main {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(0,0,0,0.6)), 
                     url("https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
     height: 100vh;
+}
+
+.btn-green {
+    background-color: #416a59;
+}
+
+.custom-color {
+    color: #416a59;
+}
+
+.form-title {
+    text-shadow: 3px 3px #416a59;
 }
