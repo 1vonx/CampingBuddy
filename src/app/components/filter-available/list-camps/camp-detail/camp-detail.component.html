@@ -1,0 +1,13 @@
+<main class="container mt-5">
+    <div>
+        <h1>{{camp?.name}}</h1>
+
+        <div> Categories: 
+            <mat-chip-listbox aria-label="Categories" *ngFor="let cat of categories">
+                <mat-chip>
+                 {{cat}}
+                </mat-chip>
+              </mat-chip-listbox>
+            </div>
+    </div>
+</main>

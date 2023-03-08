@@ -5,6 +5,6 @@
 
             <h2 class="card__title">{{ camp?.name }}</h2>
         </div>
-        <button class="card__button">Read more</button>
+        <button class="card__button" [routerLink]="['/list-camps', camp?.id]">Read more</button>
     </div>
 </article>

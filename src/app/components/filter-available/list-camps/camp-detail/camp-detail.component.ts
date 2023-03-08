@@ -1,21 +1,28 @@
-import { CAMPS } from './../../../data/camps';
-import { CampsService } from './../../../service/camps/camps.service';
-import { Camp } from './../../../models/camp';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CAMPS } from 'src/app/data/camps';
+import { Camp } from 'src/app/models/camp';
 
 @Component({
-  selector: 'app-list-camps',
-  templateUrl: './list-camps.component.html',
-  styleUrls: ['./list-camps.component.css']
+  selector: 'app-camp-detail',
+  templateUrl: './camp-detail.component.html',
+  styleUrls: ['./camp-detail.component.css']
 })
-export class ListCampsComponent {
-
+export class CampDetailComponent {
   camps: Camp[] = CAMPS;
+  camp?: Camp;
+  categories?: any;
+  
   startDate: string | undefined;
   endDate: string | undefined;
+  text: string | undefined;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private route: ActivatedRoute) {
+
+    const id = route.snapshot.paramMap.get('id');
+    this.camp = this.camps.find(c => c.id === Number(id));
+    this.categories = this.camp?.categories.split(',');
+
     if (this.router.getCurrentNavigation()?.extras.state) {
       const navigation = this.router.getCurrentNavigation();
       const state = navigation?.extras.state as { startDate: string, endDate: string };
@@ -34,9 +41,4 @@ export class ListCampsComponent {
       // todo
     }
   }
-  // get getFilteredMovies(): Movie[] {
-  //   return this.movies.filter(movie => movie.title.toLocaleLowerCase()
-  //   .includes(this.searchTerm.toLocaleLowerCase()));
-  // }
-
 }

@@ -1,20 +1,20 @@
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
+} */
 
-body,
+/* body,
 h2,
 p {
     margin: 0;
-}
+} */
 
-body {
+/* body {
     display: grid;
     place-items: center;
     height: 100vh;
-}
+} */
 
 h2 {
     font-size: 2.25rem;
@@ -52,10 +52,12 @@ h2 {
     --flow-space: 0.9375rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-self: flex-end;
     height: 55%;
-    padding: 12% 1.25rem 25%;
+    /* padding: 12% 1.25rem 25%; */
+    padding: 0 1rem;
+    width: 100%;
     background: linear-gradient(180deg,
             hsla(0, 0%, 0%, 0) 0%,
             hsla(0, 0%, 0%, 0.3) 10%,
@@ -76,14 +78,14 @@ h2 {
     content: "";
     position: absolute;
     height: 0.3125rem;
-    width: 70%;
+    width: 100%;
     bottom: calc((1.25rem - 0.5rem) * -1);
     left: -1.25rem;
     background-color: #416a59;
 }
 
 .card__button {
-    padding: 0.75em 1.6em;
+    padding: 10px 10px;
     width: fit-content;
     width: -moz-fit-content;
     font-variant: small-caps;
@@ -91,7 +93,6 @@ h2 {
     border-radius: 0.45em;
     border: none;
     background-color: #416a59;
-    font-family: #000;
     font-size: 1.125rem;
     color: white;
 }

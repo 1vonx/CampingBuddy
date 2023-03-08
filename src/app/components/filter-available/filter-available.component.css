@@ -19,3 +19,11 @@ main {
 .form-title {
     text-shadow: 3px 3px #416a59;
 }
+
+::ng-deep .mat-calendar-table-header {
+    color: #416a59;
+}
+
+/* ::ng-deep .mat-calendar-header {
+    color: red;
+} */

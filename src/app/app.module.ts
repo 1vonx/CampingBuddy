@@ -14,7 +14,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListCampsComponent } from './components/filter-available/list-camps/list-camps.component';
 import { CampCardComponent } from './components/filter-available/list-camps/camp-card/camp-card.component';
-
+import { CampDetailComponent } from './components/filter-available/list-camps/camp-detail/camp-detail.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CampCardComponent } from './components/filter-available/list-camps/camp
     HomeComponent,
     FilterAvailableComponent,
     ListCampsComponent,
-    CampCardComponent
+    CampCardComponent,
+    CampDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { CampCardComponent } from './components/filter-available/list-camps/camp
     MatInputModule,
     MatNativeDateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
