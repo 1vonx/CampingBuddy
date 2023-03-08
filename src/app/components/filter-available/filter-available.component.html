@@ -1,17 +1,16 @@
 <main class="text-center d-flex align-items-center">
-    <!-- <img class="position-absolute cover-full" src='https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'> -->
     <div class="container text-white" id="main-inner">
-            <h2>Enter dates for your camp adventure</h2>
+            <h2 class="form-title fw-bolder">Enter dates for your camp adventure</h2>
             <form [formGroup]="dateForm">
                 <mat-form-field appearance="fill" class="example-form-field me-3">
                     <mat-label>Choose start date</mat-label>
                     <input matInput [matDatepicker]="startPicker" formControlName="startDate">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-hint class="fw-bold">MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="startPicker"></mat-datepicker-toggle>
                     <mat-datepicker #startPicker>
                       <mat-datepicker-actions>
-                        <button mat-button matDatepickerCancel>Cancel</button>
-                        <button mat-raised-button color="" matDatepickerApply>Apply</button>
+                        <button class="btn btn-green rounded-3 shadow text-white me-2" mat-button matDatepickerCancel>Cancel</button>
+                        <button class="btn btn-green rounded-3 shadow text-white" mat-raised-button matDatepickerApply >Apply</button>
                       </mat-datepicker-actions>
                     </mat-datepicker>
                   </mat-form-field>
@@ -19,19 +18,18 @@
                   <mat-form-field appearance="fill" class="example-form-field me-3">
                     <mat-label>Choose end date</mat-label>
                     <input matInput [matDatepicker]="endPicker" formControlName="endDate">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-hint class="fw-bold">MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="endPicker"></mat-datepicker-toggle>
                     <mat-datepicker #endPicker>
                       <mat-datepicker-actions>
-                        <button mat-button matDatepickerCancel>Cancel</button>
-                        <button mat-raised-button color="" matDatepickerApply>Apply</button>
+                        <button class="btn btn-green rounded-3 shadow text-white me-2" mat-button matDatepickerCancel>Cancel</button>
+                        <button class="btn btn-green rounded-3 shadow text-white" mat-raised-button matDatepickerApply>Apply</button>
                       </mat-datepicker-actions>
                     </mat-datepicker>
                   </mat-form-field>
             </form>   
-            
-            <div class="actions">
-              <button mat-stroked-button color="primary" (click)="submit()">Submit </button>
+            <div class="actions mt-3">
+              <button class="btn btn-green btn-lg rounded-3 shadow text-white" (click)="submit()">Submit </button>
             </div>
     </div>
 </main>

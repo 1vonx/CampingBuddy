@@ -35,7 +35,7 @@ main>.row>.custom-height>.moto-group::after {
 .customContainer {
     position: relative;
     width: 320px;
-    margin: 15vh 40vh auto;
+    margin: 15vh 50vh auto;
     perspective: 1000px;
 }
 

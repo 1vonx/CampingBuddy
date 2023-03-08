@@ -1,7 +1,6 @@
 .nav-link {
     font-size: 2.5vh;
-    font-weight: 600;
-    font-family: "Roboto", sans-serif;
+    font-weight: 500;
 }
 
 #logo{
@@ -15,14 +14,11 @@
 
 .navbar .navbar-nav .nav-item::after {
     position: absolute;
-    /* bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto; */
+    bottom: 0;
     background-color: #416a59;
     width: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     transition: linear 0.5s;
 }
 
