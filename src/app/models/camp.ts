@@ -7,5 +7,6 @@ export interface Camp
     latidude: string,
     address: string,
     dailyPrice: number,
-    categories: string
+    categories: string,
+    imgUrl: string
 }
