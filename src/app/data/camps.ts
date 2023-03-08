@@ -20,5 +20,5 @@ export const CAMPS = [
     "longitude": "string",
     "latidude": "string",
     "address": "Krusevo",
-    "dailyPrice": "150"},
+    "dailyPrice": "150",}
 ];

@@ -1,4 +1,35 @@
 .nav-link {
-    font-size: 3.5vh;
-    font-family: "Times New Roman", Times, serif;
+    font-size: 2.5vh;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+#logo{
+    max-height: 100px;
+    width: 170px;
+}
+
+.navbar .navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+    position: absolute;
+    /* bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; */
+    background-color: #416a59;
+    width: 0;
+    content: "";
+    height: 2px;
+    transition: linear 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+    width: 80%;
+}
+
+.active-link {
+    border-bottom: 2px solid #416a59;
 }

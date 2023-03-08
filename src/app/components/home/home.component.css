@@ -5,19 +5,37 @@ main {
 }
 
 .moto {
-    font-family: Gloock, serif !important; 
+    font-family: "Gloock", serif !important; 
     font-size: 10vh;
     font-weight: 700;
 }
 
+.custom-color {
+    color: #416a59;
+}
+
+main>.row>.custom-height>.moto-group {
+    position: relative;
+}
+
+main>.row>.custom-height>.moto-group::after {
+    position: absolute;
+    background-color: #416a59;
+    width: 40%;
+    content: "";
+    height: 5px;
+    left: 2vh;
+}
+
 .custom-height {
     margin-top: 30vh;
-    padding-left: 12vh;
+    /* padding-left: 12vh; */
 }
 
 .customContainer {
+    position: relative;
     width: 320px;
-    margin: 15vh 10vh 0 auto;
+    margin: 15vh 40vh auto;
     perspective: 1000px;
 }
 
@@ -39,6 +57,10 @@ main {
     background-size: cover;
     display: flex;
     box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.btn-green {
+    background-color: #416a59;
 }
 
 @keyframes rotate360 {

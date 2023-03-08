@@ -1,13 +1,11 @@
-import { CampSite } from "./campSite";
-
 export interface Camp
 {
     id: number,
     name: string,
-    spots: CampSite[],
+    spots: number,
     longitude: string,
     latidude: string,
     address: string,
-    dailyPrice: number
-
+    dailyPrice: number,
+    categories: string
 }
