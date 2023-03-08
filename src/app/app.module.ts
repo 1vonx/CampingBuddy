@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListCampsComponent } from './components/filter-available/list-camps/list-camps.component';
+import { CampCardComponent } from './components/filter-available/list-camps/camp-card/camp-card.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ListCampsComponent } from './components/filter-available/list-camps/lis
     HeaderComponent,
     HomeComponent,
     FilterAvailableComponent,
-    ListCampsComponent
+    ListCampsComponent,
+    CampCardComponent
   ],
   imports: [
     BrowserModule,
