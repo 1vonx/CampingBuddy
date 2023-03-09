@@ -1,13 +1,24 @@
-<main class="container mt-5">
-    <div>
-        <h1>{{camp?.name}}</h1>
+<main class="container">
+    <div class="row">
+        <div class="col-6">
+            <h1>{{camp?.name}}</h1>
+            <h4>Address: {{camp?.address}}</h4>
+            <div> Activities: 
+                <mat-chip-listbox aria-label="Activities" *ngFor="let cat of categories" class="mx-1">
+                    <mat-chip>
+                     {{cat}}
+                    </mat-chip>
+                  </mat-chip-listbox>
+             </div>
+             <div> Available spots from {{startDate | date: 'longDate'}} to {{endDate | date: 'longDate'}}: {{camp?.spots}}</div>
+        </div>
+        <div class="col-6 mx-auto">
 
-        <div> Categories: 
-            <mat-chip-listbox aria-label="Categories" *ngFor="let cat of categories">
-                <mat-chip>
-                 {{cat}}
-                </mat-chip>
-              </mat-chip-listbox>
-            </div>
+            <iframe width="550" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            [src]="trustedUrl" class="mt-3"></iframe>
+        </div>
+   
+
+       
     </div>
 </main>

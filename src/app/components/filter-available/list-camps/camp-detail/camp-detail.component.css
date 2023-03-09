@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+mat-chip-listbox {
+    display:inline-block;
+}
+
+.container {
+    margin-top: 10vh;
+}
+
+h1 {
+    font-family: "Gloock", serif !important; 
+    font-size: 6vh;
+    font-weight: 700;
+    color: #416a59;
+}

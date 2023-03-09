@@ -5,7 +5,7 @@ export interface Camp
     type: string,
     spots: number,
     longitude: string,
-    latidude: string,
+    latitude: string,
     address: string,
     dailyPrice: string,
     categories: string,
