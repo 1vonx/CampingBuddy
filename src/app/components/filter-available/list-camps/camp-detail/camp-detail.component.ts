@@ -18,8 +18,8 @@ export class CampDetailComponent {
   numDays?: number;
   startDate: string | undefined;
   endDate: string | undefined;
-  iframeSrc: string | undefined
-  trustedUrl: SafeUrl | undefined
+  iframeSrc: string | undefined;
+  trustedUrl: SafeUrl | undefined;
 
   constructor(private router: Router, private route: ActivatedRoute, private sanitizer: DomSanitizer, private service: CampsService) {
     this.camp = this.service.getCampById(route.snapshot.paramMap.get('id')!);
@@ -29,13 +29,13 @@ export class CampDetailComponent {
 
     if (this.router.getCurrentNavigation()?.extras.state) {
       const navigation = this.router.getCurrentNavigation();
-      const state = navigation?.extras.state as { startDate: string, endDate: string };
+      const state = navigation?.extras.state as { startDate: string, endDate: string};
       this.startDate = state?.startDate
       this.endDate = state?.endDate
       let difference: number = (new Date(this.endDate).getTime()) - (new Date(this.startDate).getTime())
       this.numDays = Math.abs(Math.ceil(difference / (1000 * 3600 * 24)));
-      this.totalPrice = this.numDays * Number(this.camp!.dailyPrice);
-      console.log(this.totalPrice)
+      this.totalPrice = this.numDays * Number(this.camp!.dailyPrice.split("$")[0]);
+      // console.log(this.camp!.dailyPrice);
     }
   }
 

@@ -31,4 +31,5 @@ randomNums: number[];
     return this.camps.filter(camp => camp.name.toLocaleLowerCase()
     .includes(searchTerm.toLocaleLowerCase()));
   }
+
 }

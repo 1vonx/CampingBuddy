@@ -18,7 +18,6 @@ export class HeaderComponent {
 
         if (val instanceof NavigationStart && (val as NavigationStart).url === '/filter') {
           this.isFixed = true;
-
         }
         else {
           this.isFixed = false;

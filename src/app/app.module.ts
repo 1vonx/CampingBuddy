@@ -28,7 +28,7 @@ import { PriceValuePipe } from './price-value.pipe';
     ListCampsComponent,
     CampCardComponent,
     CampDetailComponent,
-    ReservationFormComponent
+    ReservationFormComponent,
     PriceValuePipe
   ],
   imports: [
