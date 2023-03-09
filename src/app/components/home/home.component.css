@@ -4,6 +4,33 @@ main {
     overflow-x: clip;
 }
 
+#hero {
+    height: 90vh;
+}
+
+#custom-carousel {
+    height: 50vh;
+    overflow-x: clip;
+}
+
+#popular-camps {
+    height: 70vh;
+}
+
+main>div#popular-camps > h3.popular-text:before{
+    position: absolute;
+    background-color: #416a59;
+    width: 52vw;
+    content: "";
+    height: 5px;
+}
+
+.popular-text {
+    font-family: "Gloock", serif !important; 
+    font-size: 5vh;
+    font-weight: 700;
+}
+
 .moto {
     font-family: "Gloock", serif !important; 
     font-size: 10vh;
