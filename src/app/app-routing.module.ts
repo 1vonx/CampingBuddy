@@ -5,13 +5,15 @@ import { FilterAvailableComponent } from './components/filter-available/filter-a
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { ReservationFormComponent } from './components/filter-available/list-camps/camp-detail/reservation-form/reservation-form.component';
 
 const routes: Routes = [
   { path: 'list-camps/:id', component: CampDetailComponent},
   { path: 'list-camps', component: ListCampsComponent },
   { path: 'filter', component: FilterAvailableComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: 'reservation-form', component: ReservationFormComponent},
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

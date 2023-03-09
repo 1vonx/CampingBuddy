@@ -59,8 +59,13 @@ main>.row>.custom-height>.moto-group::after {
     box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
-.btn-green {
+.btn-green, .bg-custom {
     background-color: #416a59;
+}
+
+.btn.btn-green:hover,
+.btn.btn-green:focus{
+    opacity: 0.8;
 }
 
 @keyframes rotate360 {
