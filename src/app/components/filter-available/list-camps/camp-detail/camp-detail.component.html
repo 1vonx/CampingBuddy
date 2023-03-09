@@ -1,24 +1,42 @@
 <main class="container">
-    <div class="row">
-        <div class="col-6">
-            <h1>{{camp?.name}}</h1>
-            <h4>Address: {{camp?.address}}</h4>
-            <div> Activities: 
-                <mat-chip-listbox aria-label="Activities" *ngFor="let cat of categories" class="mx-1">
-                    <mat-chip>
-                     {{cat}}
-                    </mat-chip>
-                  </mat-chip-listbox>
-             </div>
-             <div> Available spots from {{startDate | date: 'longDate'}} to {{endDate | date: 'longDate'}}: {{camp?.spots}}</div>
+    <div class="row m-auto">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+
+            <div class="intro">
+                <h1 class="title p-5"><span class="underline">{{camp?.name}}</span></h1>
+            </div>
+
+            <img [src]="camp?.imgUrl">
+
         </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-6">
+
+            <div class="mt-3">
+                <h4> <i class="bi bi-geo-alt-fill"></i> Address: {{camp?.address}}</h4>
+                <h5> Currently available spots: <i class="bi bi-people-fill"></i> {{camp?.spots}}</h5>
+                <div> Activities:
+                    <mat-chip-listbox aria-label="Activities" *ngFor="let cat of categories" class="mx-1">
+                        <mat-chip>
+                            {{cat}}
+                        </mat-chip>
+                    </mat-chip-listbox>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+
+    <div class="row">
+
         <div class="col-6 mx-auto">
 
             <iframe width="550" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            [src]="trustedUrl" class="mt-3"></iframe>
+                [src]="trustedUrl" class="mt-3"></iframe>
         </div>
-   
 
-       
+
+
     </div>
 </main>

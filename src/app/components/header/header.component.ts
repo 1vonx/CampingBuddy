@@ -1,4 +1,6 @@
+import { ActivatedRoute, NavigationStart, Router, RoutesRecognized } from '@angular/router';
 import { Component } from '@angular/core';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +9,20 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  isFixed = false;
+
+  constructor(private route: ActivatedRoute, private router: Router) {
+
+    router.events.pipe(filter(val => ((val instanceof NavigationStart)))).
+      subscribe((val) => {
+
+        if (val instanceof NavigationStart && (val as NavigationStart).url === '/filter') {
+          this.isFixed = true;
+
+        }
+        else {
+          this.isFixed = false;
+        }
+      });
+  }
 }

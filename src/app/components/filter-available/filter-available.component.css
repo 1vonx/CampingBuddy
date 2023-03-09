@@ -24,6 +24,10 @@ main {
     color: #416a59;
 }
 
-/* ::ng-deep .mat-calendar-header {
-    color: red;
-} */
+::ng-deep .mat-calendar-body-selected {
+    background-color: #416a59 !important;
+}
+
+::ng-deep .mat-calendar-body-cell-content:hover {
+    background-color: #779186 !important;
+}
