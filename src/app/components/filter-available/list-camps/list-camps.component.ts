@@ -14,29 +14,19 @@ export class ListCampsComponent {
   camps: Camp[] = CAMPS;
   startDate: string | undefined;
   endDate: string | undefined;
+  searchTerm: string = '';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private service: CampsService) {
     if (this.router.getCurrentNavigation()?.extras.state) {
       const navigation = this.router.getCurrentNavigation();
       const state = navigation?.extras.state as { startDate: string, endDate: string };
       this.startDate = state?.startDate
       this.endDate = state?.endDate
-      // this.startDate = new Date(this.startDate)
-      // this.endDate = new Date(this.endDate)
-      // let difference = date_2.getTime() - this.startDate.getTime()
-      // let days = Math.abs(Math.ceil(difference / (1000 * 3600 * 24)));
-
-      // this.cars.forEach(car => {
-      //   car.totalPrice = days * car.priceForADay
-      //   car.totalRating = (car.sumRating/car.numReviews).toPrecision(3)
-      //  })
-    } else {
-      // todo
-    }
+    } 
   }
-  // get getFilteredMovies(): Movie[] {
-  //   return this.movies.filter(movie => movie.title.toLocaleLowerCase()
-  //   .includes(this.searchTerm.toLocaleLowerCase()));
-  // }
+
+  get searchByName(): Camp[] {
+    return this.service.searchByName(this.searchTerm);
+  }
 
 }

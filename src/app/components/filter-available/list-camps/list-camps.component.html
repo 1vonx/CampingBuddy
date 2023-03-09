@@ -1,23 +1,13 @@
-<!-- <div class="container mt-5">
-    <h1>Available camps </h1>
-    <hr>
-    <input type="text" class="form-control mb-3" placeholder="Search movies..." [(ngModel)]="searchTerm">
-    <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-6 col-lg-4 my-3" *ngFor="let camp of camps">
-        <app-movie-details [movieObject]="movie" (deleteMovie)="deleteMovie($event)"></app-movie-details>
-        <app-camp-card [camp]="camp"></app-camp-card>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="container">
-    <h1 class="title-text text-center">Available camps 
-      <br>
-      from {{startDate | date: 'longDate'}} to {{endDate | date: 'longDate'}}</h1>
-    <hr>
-    <div class="row">
-      <div class="col-sm-12 col-md-6 col-lg-4 my-3" *ngFor="let camp of camps">
-        <app-camp-card [camp]="camp" [startDate]="startDate" [endDate]="endDate"></app-camp-card>
-      </div>
+<div class="container">
+  <h1 class="title-text text-center">Available camps
+    <br>
+    from {{startDate | date: 'longDate'}} to {{endDate | date: 'longDate'}}
+  </h1>
+  <div class="row">
+    <input type="text" class="form-control m-auto search-input" placeholder="Search camps by name"
+      [(ngModel)]="searchTerm">
+    <div class="col-sm-12 col-md-6 col-lg-4 my-3" *ngFor="let camp of searchByName">
+      <app-camp-card [camp]="camp" [startDate]="startDate" [endDate]="endDate"></app-camp-card>
     </div>
   </div>
+</div>
