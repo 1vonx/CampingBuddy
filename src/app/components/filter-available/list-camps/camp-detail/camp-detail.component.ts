@@ -14,7 +14,8 @@ export class CampDetailComponent {
   camps: Camp[] = CAMPS;
   camp?: Camp;
   categories?: any;
-  
+  totalPrice?: number;
+  numDays?: number;
   startDate: string | undefined;
   endDate: string | undefined;
   iframeSrc: string | undefined
@@ -31,17 +32,10 @@ export class CampDetailComponent {
       const state = navigation?.extras.state as { startDate: string, endDate: string };
       this.startDate = state?.startDate
       this.endDate = state?.endDate
-      // this.startDate = new Date(this.startDate)
-      // this.endDate = new Date(this.endDate)
-      // let difference = date_2.getTime() - this.startDate.getTime()
-      // let days = Math.abs(Math.ceil(difference / (1000 * 3600 * 24)));
-
-      // this.cars.forEach(car => {
-      //   car.totalPrice = days * car.priceForADay
-      //   car.totalRating = (car.sumRating/car.numReviews).toPrecision(3)
-      //  })
-    } else {
-      // todo
+      let difference: number = (new Date(this.endDate).getTime()) - (new Date(this.startDate).getTime())
+      this.numDays = Math.abs(Math.ceil(difference / (1000 * 3600 * 24)));
+      this.totalPrice = this.numDays * Number(this.camp!.dailyPrice);
+      console.log(this.totalPrice)
     }
   }
 

@@ -1,20 +1,35 @@
 <main class="container">
     <div class="row m-auto">
-        <div class="col-sm-12 col-md-12 col-lg-6">
 
-            <div class="intro">
-                <h1 class="title p-5"><span class="underline">{{camp?.name}}</span></h1>
+        <!-- <div class="col-sm-12 col-md-12 col-lg-6"> -->
+
+        <div class="intro p-3">
+            <!--title p-5 -->
+            <h1 class="title"><span class="underline">{{camp?.name}}</span></h1>
+
+            <!-- -->
+            <h4 class="pt-2"> <i class="bi bi-geo-alt-fill"></i> Address: {{camp?.address}}</h4>
+            <h5> Currently available spots: <i class="bi bi-people-fill"></i> {{camp?.spots}}</h5>
+            <h5> Total price for {{ numDays }} days: {{ totalPrice | priceValue}}</h5>
+            <div> Activities:
+                <mat-chip-listbox aria-label="Activities" *ngFor="let cat of categories" class="mx-1">
+                    <mat-chip>
+                        {{cat}}
+                    </mat-chip>
+                </mat-chip-listbox>
             </div>
-
-            <img [src]="camp?.imgUrl">
+            <!-- -->
 
         </div>
 
-        <div class="col-sm-12 col-md-12 col-lg-6">
+        <img [src]="camp?.imgUrl">
 
+        <!-- </div> -->
+        <!-- <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="mt-3">
                 <h4> <i class="bi bi-geo-alt-fill"></i> Address: {{camp?.address}}</h4>
                 <h5> Currently available spots: <i class="bi bi-people-fill"></i> {{camp?.spots}}</h5>
+                <h5> Total price for {{ numDays }} days: {{ totalPrice | priceValue}}</h5>
                 <div> Activities:
                     <mat-chip-listbox aria-label="Activities" *ngFor="let cat of categories" class="mx-1">
                         <mat-chip>
@@ -23,20 +38,14 @@
                     </mat-chip-listbox>
                 </div>
             </div>
-           
-        </div>
+        </div> -->
 
     </div>
 
     <div class="row">
-
         <div class="col-6 mx-auto">
-
             <iframe width="550" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                 [src]="trustedUrl" class="mt-3"></iframe>
         </div>
-
-
-
     </div>
 </main>
