@@ -1,3 +1,4 @@
+import { CampsService } from './../../../../service/camps/camps.service';
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -19,10 +20,8 @@ export class CampDetailComponent {
   iframeSrc: string | undefined
   trustedUrl: SafeUrl | undefined
 
-  constructor(private router: Router, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
-
-    const id = route.snapshot.paramMap.get('id');
-    this.camp = this.camps.find(c => c.id === Number(id));
+  constructor(private router: Router, private route: ActivatedRoute, private sanitizer: DomSanitizer, private service: CampsService) {
+    this.camp = this.service.getCampById(route.snapshot.paramMap.get('id')!);
     this.categories = this.camp?.categories.split(',');
     this.iframeSrc = `https://www.openstreetmap.org/export/embed.html?bbox=17.638549804687504%2C40.204050425113294%2C24.1754150390625%2C42.956422511073335&amp&layer=mapnik&marker=${this.camp?.longitude}%2C${this.camp?.latitude}`
     this.trustedUrl = this.sanitizeUrl(this.iframeSrc);
@@ -47,7 +46,7 @@ export class CampDetailComponent {
   }
 
   sanitizeUrl(original: string) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(original)
+    return this.sanitizer.bypassSecurityTrustResourceUrl(original);
   }
 
 }
