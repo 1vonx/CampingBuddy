@@ -1,4 +1,3 @@
-import { Camp } from '../models/camp';
 export const CAMPS = [
     {
         "id": 0,
