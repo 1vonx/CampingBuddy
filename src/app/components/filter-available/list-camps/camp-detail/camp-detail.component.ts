@@ -34,7 +34,7 @@ export class CampDetailComponent {
       this.endDate = state?.endDate
       let difference: number = (new Date(this.endDate).getTime()) - (new Date(this.startDate).getTime())
       this.numDays = Math.abs(Math.ceil(difference / (1000 * 3600 * 24)));
-      this.totalPrice = this.numDays * Number(this.camp!.dailyPrice.split("$")[0]);
+      this.totalPrice = this.numDays * Number(this.camp!.dailyPrice);
       // console.log(this.camp!.dailyPrice);
     }
   }
