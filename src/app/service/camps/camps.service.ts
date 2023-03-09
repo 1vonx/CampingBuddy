@@ -28,7 +28,7 @@ randomNums: number[];
   }
 
   searchByName(searchTerm: string) {
-    return this.CAMPS.filter(camp => camp.name.toLocaleLowerCase()
+    return this.camps.filter(camp => camp.name.toLocaleLowerCase()
     .includes(searchTerm.toLocaleLowerCase()));
   }
 }
