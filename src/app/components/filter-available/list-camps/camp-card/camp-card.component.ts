@@ -1,5 +1,6 @@
 import { Camp } from './../../../../models/camp';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-camp-card',
@@ -9,15 +10,34 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CampCardComponent {
 
   @Input() camp: Camp | undefined;
-  @Output() deleteMovie = new EventEmitter<Camp>();
-  isHovered = false;
+  @Input() startDate?: string | undefined;
+  @Input() endDate?: string | undefined;
+  // @Output() deleteMovie = new EventEmitter<Camp>();
+  // isHovered = false;
+  navigationExtra: NavigationExtras | undefined;
 
-  onMouseEnter(): void {
-    this.isHovered = true;
+  constructor(private router: Router) {
+
   }
 
-  onMouseLeave(): void {
-    this.isHovered = false;
+  // onMouseEnter(): void {
+  //   this.isHovered = true;
+  // }
+
+  // onMouseLeave(): void {
+  //   this.isHovered = false;
+  // }
+
+  onClick() {
+
+    this.navigationExtra = {
+      state: {
+        startDate: this.startDate,
+        endDate: this.endDate
+      }
+    }
+
+    this.router.navigate(['/list-camps', this.camp?.id], this.navigationExtra);
   }
 
 }
