@@ -17,6 +17,7 @@ import { CampCardComponent } from './components/filter-available/list-camps/camp
 import { CampDetailComponent } from './components/filter-available/list-camps/camp-detail/camp-detail.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { PriceValuePipe } from './price-value.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PriceValuePipe } from './price-value.pipe';
     ListCampsComponent,
     CampCardComponent,
     CampDetailComponent,
-    PriceValuePipe
+    PriceValuePipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
