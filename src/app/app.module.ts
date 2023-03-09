@@ -16,7 +16,7 @@ import { ListCampsComponent } from './components/filter-available/list-camps/lis
 import { CampCardComponent } from './components/filter-available/list-camps/camp-card/camp-card.component';
 import { CampDetailComponent } from './components/filter-available/list-camps/camp-detail/camp-detail.component';
 import {MatChipsModule} from '@angular/material/chips';
-
+import {MatPaginatorModule} from '@angular/material/paginator'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +37,8 @@ import {MatChipsModule} from '@angular/material/chips';
     MatNativeDateModule,
     FormsModule,
     ReactiveFormsModule,
-    MatChipsModule
+    MatChipsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

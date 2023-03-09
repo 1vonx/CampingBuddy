@@ -4,3 +4,50 @@
     font-weight: 600;
     padding-top: 8vh;
 }
+.mat-elevation-z8{
+    font-family: "Roboto", sans-serif;
+    display: center;
+  align-items: justify;
+   justify-content: center;
+  justify-content: flex-start !important;
+  min-height: 56px;
+  padding: 0 8px;
+  width: 100%;
+}
+::ng-deep .mat-mdc-paginator-outer-container{
+ background-color: white; 
+ display: center;
+ align-items: center;
+ 
+ /* border-radius: 30px; */
+}
+::ng-deep .mat-mdc-paginator-container{
+    justify-content: center !important;
+    
+}
+::ng-deep .mat-mdc-paginator{
+color: black;
+}
+
+
+::ng-dee .mat-mdc-paginator-range-actions{
+    column-fill: green !important;
+    background: red !important;
+    color: white !important;
+}
+::ng-dee.mat-mdc-form-field{
+    background-color: white !important;
+}
+::ng-dee .mdc-icon-button{
+    fill: white !important;
+}
+::ng-dee .mdc-icon-button{
+    color: red;
+    --mat-mdc-button-persistent-ripple-color:green !important; 
+    --mat-mdc-button-ripple-color:red !important;
+     
+}
+::ng-deep .mat-mdc-paginator-range-actions .mat-mdc-icon-button .mat-mdc-button-touch-target {
+    color: red !important;
+  
+}
