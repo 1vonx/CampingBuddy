@@ -20,6 +20,7 @@ export class CampDetailComponent {
   endDate: string | undefined;
   iframeSrc: string | undefined;
   trustedUrl: SafeUrl | undefined;
+  datesSelected = false;
 
   constructor(private router: Router, private route: ActivatedRoute, private sanitizer: DomSanitizer, private service: CampsService) {
     this.camp = this.service.getCampById(route.snapshot.paramMap.get('id')!);
@@ -36,6 +37,10 @@ export class CampDetailComponent {
       this.numDays = Math.abs(Math.ceil(difference / (1000 * 3600 * 24)));
       this.totalPrice = this.numDays * Number(this.camp!.dailyPrice);
       // console.log(this.camp!.dailyPrice);
+    }
+
+    if(this.startDate !== undefined && this.endDate !== undefined){
+      this.datesSelected = true;
     }
   }
 
