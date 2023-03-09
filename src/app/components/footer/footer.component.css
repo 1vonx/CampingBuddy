@@ -1,0 +1,11 @@
+footer {
+    background-color: #779186;
+    margin: auto;
+    color: white;
+    font-weight: 100;
+    font-size: 2vh;
+}
+
+.no-display {
+    display: none;
+}
