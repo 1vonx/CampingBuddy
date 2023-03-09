@@ -17,6 +17,7 @@ import { CampCardComponent } from './components/filter-available/list-camps/camp
 import { CampDetailComponent } from './components/filter-available/list-camps/camp-detail/camp-detail.component';
 import {MatChipsModule} from '@angular/material/chips';
 import { ReservationFormComponent } from './components/filter-available/list-camps/camp-detail/reservation-form/reservation-form.component';
+import { PriceValuePipe } from './price-value.pipe';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,7 @@ import { ReservationFormComponent } from './components/filter-available/list-cam
     FilterAvailableComponent,
     ListCampsComponent,
     CampCardComponent,
-    CampDetailComponent,
-    ReservationFormComponent
+    CampDetailComponent
   ],
   imports: [
     BrowserModule,

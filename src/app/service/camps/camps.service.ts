@@ -27,4 +27,8 @@ randomNums: number[];
     return this.camps.filter(c => this.randomNums.includes(c.id));
   }
 
+  searchByName(searchTerm: string) {
+    return this.CAMPS.filter(camp => camp.name.toLocaleLowerCase()
+    .includes(searchTerm.toLocaleLowerCase()));
+  }
 }
