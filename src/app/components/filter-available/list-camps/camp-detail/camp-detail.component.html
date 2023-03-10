@@ -1,6 +1,7 @@
-<main class="container-fluid">
-    <div class="row m-auto custom-color">
-        <div class="intro p-3 col-sm-12 col-md-12 col-lg-6">
+<!-- col-sm-12 col-md-12 col-lg-6 -->
+<main>
+    <div class="row justify-content-center m-auto custom-color">
+        <div class="intro p-3 ">
             <h1 class="title"><span class="underline">{{camp?.name}}</span></h1>
             <h4 class="pt-2"> <i class="bi bi-geo-alt-fill"></i> Address: {{camp?.address}}</h4>
             <h5> Currently available spots: <i class="bi bi-people-fill"></i> {{camp?.spots}}</h5>
@@ -13,8 +14,8 @@
                 </mat-chip-listbox>
             </div>
         </div>
-        <div class="test col-sm-12 col-md-12 col-lg-6">
-        </div>
+        <!-- <div class="test col-sm-12 col-md-12 col-lg-6">
+        </div> -->
     </div>
 
 
@@ -36,13 +37,8 @@
             </div>
         </div> -->
 
-    <div class="row mt-5">
-        <div class="col-6">
-            <iframe width="550" height="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                [src]="trustedUrl"></iframe>
-        </div>
-        <div class="col-6"> 
-            <app-reservation-form ></app-reservation-form>
-        </div>
+    <div class="row before-footer mx-0">
+        <iframe class="col-12" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" [src]="trustedUrl"></iframe>
+        <app-reservation-form *ngIf="datesSelected" class="col-12 custom-form" [place]="camp?.name" [startDate]="startDate" [endDate]="endDate"></app-reservation-form>
     </div>
 </main>

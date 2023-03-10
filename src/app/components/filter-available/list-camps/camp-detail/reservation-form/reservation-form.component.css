@@ -1,6 +1,8 @@
 .section {
     /* position: relative; */
-    height: 100vh;
+    height: 50vh;
+    overflow-x: clip;
+
 }
 
 .section .section-center {
@@ -16,15 +18,16 @@
 
 .booking-form {
     position: relative;
-    max-width: 642px;
-    width: 100%;
+    max-width: 665px;
+    /* width: 100%; */
     margin: auto;
     padding: 40px;
     overflow: hidden;
     background-image: url('https://feel-albania.com/wp-content/uploads/2020/02/Korabi-Tent.jpg');
     background-size: cover;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     z-index: 20;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
 .booking-form::before {
@@ -63,7 +66,7 @@
     padding: 0px 25px;
     border: none;
     border-radius: 40px;
-    color: #fff;
+    color: white;
     -webkit-box-shadow: 0px 0px 0px 2px transparent;
     box-shadow: 0px 0px 0px 2px transparent;
     -webkit-transition: 0.2s;
@@ -159,6 +162,10 @@
 .booking-form .form-group.input-not-empty .form-label {
     opacity: 1;
     top: 10px;
+}
+
+.submit-btn:disabled {
+    opacity: 0.8;
 }
 
 .booking-form .submit-btn {

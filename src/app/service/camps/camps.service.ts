@@ -8,11 +8,20 @@ import { Camp } from 'src/app/models/camp';
 export class CampsService {
 
 camps : Camp[] = CAMPS;
-randomNums: number[];
+randomNums: Set<number>;
 
   constructor() { 
-    this.randomNums = [Math.floor(Math.random()*8), Math.floor(Math.random()*8), Math.floor(Math.random()*8)];
+    this.randomNums = this.randomIds();
   }
+
+  randomIds(){
+    const set = new Set<number>()
+    while(set.size < 3) {
+      set.add(Math.floor(Math.random() * 8) + 1)
+    }
+    return set
+  }
+
 
   getAllCamps(): Camp[] {
     return this.camps;
@@ -23,8 +32,8 @@ randomNums: number[];
   }
 
   getMostPopularCamps(){
-    console.log(this.randomNums);
-    return this.camps.filter(c => this.randomNums.includes(c.id));
+    // console.log(this.randomNums);
+    return this.camps.filter(c => this.randomNums.has(c.id));
   }
 
   searchByName(searchTerm: string) {
