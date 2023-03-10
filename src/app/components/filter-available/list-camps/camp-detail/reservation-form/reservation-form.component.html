@@ -6,7 +6,7 @@
                     <div class="form-header">
                         <h1>Make your reservation for</h1>
                     </div>
-                    <form (ngSubmit)="book()" #bookForm="ngForm">
+                    <form  #bookForm="ngForm">
                         <div class="form-group">
                             <input class="form-control" type="text" [placeholder]="place" disabled>
                             <span class="form-label">Destination</span>
@@ -51,7 +51,7 @@
                         </div>
                     </form>
                     <div class="form-btn">
-                        <button type="submit" class="submit-btn" [disabled]="bookForm.invalid">Book Now</button>
+                        <button type="submit" class="submit-btn" [disabled]="bookForm.invalid" (click)="book()">Book Now</button>
                     </div>
                 </div>
             </div>
