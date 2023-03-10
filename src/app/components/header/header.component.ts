@@ -16,9 +16,8 @@ export class HeaderComponent {
     router.events.pipe(filter(val => ((val instanceof NavigationStart)))).
       subscribe((val) => {
 
-        if (val instanceof NavigationStart && ((val as NavigationStart).url === '/filter' || (val as NavigationStart).url === '/home')) {
+        if (val instanceof NavigationStart && ((val as NavigationStart).url === '/filter')) {
           this.isFixed = true;
-
         }
         else {
           this.isFixed = false;

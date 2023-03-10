@@ -1,29 +1,34 @@
 <main>
-    <div class="row">
-      <div class="col-md-12 col-lg-6 ps-5 custom-height">
-        <div class="moto-group">
-          <h1 class="moto"><span class="custom-color">Wander</span> Often,</h1>
-          <h1 class="moto">Wonder Always.</h1>
-        </div>
-        <div class="mt-4 pt-1 ms-3">
-          <h4> {{ text }} </h4>
-          <button routerLink="/filter" class="btn btn-green rounded-3 shadow text-white mt-4 px-2">FIND YOUR CAMPSITE</button>
-        </div>
+  <div class="row" id="hero">
+    <div class="col-md-12 col-lg-6 ps-5 custom-height autofocus">
+      <div class="moto-group">
+        <h1 class="moto"><span class="custom-color">Wander</span> Often,</h1>
+        <h1 class="moto">Wonder Always.</h1>
       </div>
-      <div class="col-md-12 col-lg-6">
-        <div class="customContainer"> 
-          <div class="carousel ">
-            <div class="image"><span></span></div> 
-            <div class="image"><span></span></div>
-            <div class="image"><span></span></div>
-            <div class="image"><span></span></div>
-            <div class="image"><span></span></div>
-            <div class="image"><span></span></div>
-            <div class="image"><span></span></div>
-            <div class="image"><span></span></div>
-            <div class="image"><span></span></div>
-          </div>
+      <div class="mt-4 pt-1 ms-3">
+        <h4> {{ text }} </h4>
+        <button routerLink="/filter" class="btn btn-green rounded-3 shadow text-white my-4 px-2">FIND YOUR
+          CAMPSITE</button>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-6" id="custom-carousel">
+      <div class="customContainer">
+        <div class="carousel mt-5">
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
+          <div class="image"><span></span></div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row my-5 pt-5" id="popular-camps">
+    <h3 class="text-center popular-text"><span class="custom-color">Popular</span> camps</h3>
+    <app-camp-card class="col-sm-12 col-md-4 py-3" *ngFor="let camp of mostPopular" [camp]="camp" ></app-camp-card>
+  </div>
 </main>

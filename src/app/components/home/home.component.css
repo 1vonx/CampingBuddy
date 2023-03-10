@@ -4,6 +4,33 @@ main {
     overflow-x: clip;
 }
 
+#hero {
+    height: 90vh;
+}
+
+#custom-carousel {
+    height: 50vh;
+    overflow-x: clip;
+}
+
+#popular-camps {
+    height: 70vh;
+}
+
+main>div#popular-camps > h3.popular-text:before{
+    position: absolute;
+    background-color: #416a59;
+    width: 52vw;
+    content: "";
+    height: 5px;
+}
+
+.popular-text {
+    font-family: "Gloock", serif !important; 
+    font-size: 5vh;
+    font-weight: 700;
+}
+
 .moto {
     font-family: "Gloock", serif !important; 
     font-size: 10vh;
@@ -29,7 +56,6 @@ main>.row>.custom-height>.moto-group::after {
 
 .custom-height {
     margin-top: 15vh;
-    /* padding-left: 12vh; */
 }
 
 .customContainer {
@@ -59,8 +85,13 @@ main>.row>.custom-height>.moto-group::after {
     box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
-.btn-green {
+.btn-green, .bg-custom {
     background-color: #416a59;
+}
+
+.btn.btn-green:hover,
+.btn.btn-green:focus{
+    opacity: 0.8;
 }
 
 @keyframes rotate360 {

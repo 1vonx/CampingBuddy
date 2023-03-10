@@ -1,23 +1,21 @@
-<nav class="navbar header navbar-expand-lg bg-transparent px-3" [class.fixed-top]="isFixed">
-  <div class="container-fluid">
-    <a routerLink="/home"> <img id="logo" class="navbar-brand" class="" src="../../assets/images/logo.png">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item px-2">
-          <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link" routerLink="/filter">Book</a>
-        </li>
-        <li class="nav-item px-2">
-          <a class="nav-link">Pricing</a>
-        </li>
-      </ul>
+<nav class="navbar header navbar-expand-lg bg-transparent px-3" [class.fixed-top] = "isFixed">
+    <div class="container-fluid">
+      <img id="logo" class="navbar-brand" class="" src="../../assets/images/logo.png" routerLink="/home">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item px-2">
+            <a class="nav-link" routerLink="/home" aria-current="home">Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="#popular-camps" aria-current="page">Popular</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" routerLink="/filter" routerLinkActive="active-link">Book</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 </nav>

@@ -1,0 +1,60 @@
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <div class="form-header">
+                        <h1>Make your reservation for</h1>
+                    </div>
+                    <form (ngSubmit)="book()" #bookForm="ngForm">
+                        <div class="form-group">
+                            <input class="form-control" type="text" [placeholder]="place" disabled>
+                            <span class="form-label">Destination</span>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-text">Check In: </span>
+                                    <input class="form-control text-center" type="text" [placeholder]="startDate"
+                                        disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <span class="input-group-text">Check out: </span>
+                                    <input class="form-control" type="text" [placeholder]="endDate" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input name="email" class="form-control" type="email" placeholder="Enter your Email"
+                                        ngModel #email="ngModel" required>
+                                    <span class="form-label">Email</span>
+                                    <div class="text-danger"
+                                        *ngIf="email.errors && email.touched && email.errors['required']">Email is
+                                        required.</div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input name="phone" class="form-control" type="tel" placeholder="Enter you Phone"
+                                        ngModel #phone="ngModel" required>
+                                    <span class="form-label">Phone</span>
+                                    <div class="text-danger"
+                                        *ngIf="phone.errors && phone.touched && phone.errors['required']">Phone number
+                                        is required.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-btn">
+                        <button type="submit" class="submit-btn" [disabled]="bookForm.invalid">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

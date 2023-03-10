@@ -1,0 +1,24 @@
+.moto {
+    font-family: "Gloock", serif !important; 
+    font-size: 10vh;
+    font-weight: 700;
+}
+
+.custom-color {
+    color: #416a59;
+}
+
+.moto-group {
+    height: 86vh;
+    padding-bottom: 20vh;
+}
+
+.mat-mdc-fab[disabled][disabled] {
+    background-color: #416a59 !important;
+    color: white !important;
+}
+
+.mdc-fab {
+    width: 70px;
+    height: 70px;
+}

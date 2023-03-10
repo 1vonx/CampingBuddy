@@ -16,8 +16,13 @@ import { ListCampsComponent } from './components/filter-available/list-camps/lis
 import { CampCardComponent } from './components/filter-available/list-camps/camp-card/camp-card.component';
 import { CampDetailComponent } from './components/filter-available/list-camps/camp-detail/camp-detail.component';
 import {MatChipsModule} from '@angular/material/chips';
+import { ReservationFormComponent } from './components/filter-available/list-camps/camp-detail/reservation-form/reservation-form.component';
 import { PriceValuePipe } from './price-value.pipe';
 import { FooterComponent } from './components/footer/footer.component';
+import { ReservationDetailsComponent } from './components/filter-available/list-camps/camp-detail/reservation-form/reservation-details/reservation-details.component';
+import { MatButtonModule, MatIconAnchor, MatIconButton } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -28,8 +33,10 @@ import { FooterComponent } from './components/footer/footer.component';
     ListCampsComponent,
     CampCardComponent,
     CampDetailComponent,
+    ReservationFormComponent,
     PriceValuePipe,
-    FooterComponent
+    FooterComponent,
+    ReservationDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,8 +48,10 @@ import { FooterComponent } from './components/footer/footer.component';
     MatNativeDateModule,
     FormsModule,
     ReactiveFormsModule,
-    MatChipsModule
-  ],
+    MatChipsModule,
+    MatButtonModule,
+    MatIconModule
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })
