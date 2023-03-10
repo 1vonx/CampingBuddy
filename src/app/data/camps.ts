@@ -56,7 +56,7 @@ export const CAMPS = [
         "latitude": "20.938561",
         "address": "Shar Planina",
         "dailyPrice": "6",
-        "categories": "hiking,exploring,wood whittling,",
+        "categories": "hiking,exploring,wood whittling",
         "imgUrl": "https://images.unsplash.com/photo-1464547323744-4edd0cd0c746?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGNhbXBpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     },
     {
